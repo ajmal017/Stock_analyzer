@@ -3,8 +3,10 @@ import time
 from openpyxl import load_workbook
 
 url = "https://stock-google-news.p.rapidapi.com/v1/search"
-stock = "AIG"  # stock name
-time_frame = "1d"  # time frame
+stock = input('Choose an stock to analyze (example: AIG): ')  # stock name
+time_frame = input('Choose an timeframe (example: 5h or 1d or 1m): ')  # time frame
+print('showing max 100 entries')
+print('running...')
 
 start_time = time.time()
 wb = load_workbook("wordslist.xlsx")
